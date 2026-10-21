@@ -1,0 +1,191 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <meta name="description" content="QuizBar Privacy Policy.">
+  <title>QuizBar Privacy Policy</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --bg: #fff;
+      --text: #1f2328;
+      --muted: #59636e;
+      --line: #d0d7de;
+      --panel: #f6f8fa;
+      --link: #0969da;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #0d1117;
+        --text: #e6edf3;
+        --muted: #9da7b3;
+        --line: #30363d;
+        --panel: #161b22;
+        --link: #58a6ff;
+      }
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font: 16px/1.75 -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+    }
+
+    main {
+      width: min(900px, calc(100% - 32px));
+      margin: 0 auto;
+      padding: 40px 0 72px;
+    }
+
+    header {
+      padding-bottom: 24px;
+      border-bottom: 1px solid var(--line);
+      margin-bottom: 32px;
+    }
+
+    h1 { margin: 0 0 8px; font-size: 2rem; line-height: 1.3; }
+    h2 { margin: 40px 0 12px; font-size: 1.4rem; line-height: 1.4; }
+    h3 { margin: 28px 0 8px; font-size: 1.12rem; line-height: 1.5; }
+    p, ul, ol { margin: 10px 0; }
+    li + li { margin-top: 6px; }
+    .meta, .language { color: var(--muted); }
+    .language { margin-top: 12px; }
+    a { color: var(--link); }
+
+    .notice {
+      margin: 20px 0;
+      padding: 14px 16px;
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 10px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 12px 0;
+      font-size: .95rem;
+    }
+    th, td {
+      border: 1px solid var(--line);
+      padding: 8px 12px;
+      text-align: left;
+      vertical-align: top;
+    }
+    th { background: var(--panel); }
+
+    footer {
+      margin-top: 48px;
+      padding-top: 20px;
+      border-top: 1px solid var(--line);
+      color: var(--muted);
+      font-size: .9rem;
+    }
+  </style>
+</head>
+
+<body>
+  <main>
+    <header>
+      <h1>QuizBar Privacy Policy</h1>
+      <div class="meta">Last updated: October 21, 2026</div>
+      <div class="meta">Effective date: October 21, 2026</div>
+      <div class="language"><a href="privacy-policy-zh-cn.html" hreflang="zh-CN">简体中文</a> · English · <a href="support-en.html">Support</a></div>
+    </header>
+
+    <p>Welcome to "QuizBar" (the "App"), a floating quiz card tool for macOS developed and operated by an independent developer ("we").</p>
+
+    <p>We take your privacy seriously. The App <strong>does not offer account registration, cloud sync, advertising, usage analytics, or remote data analysis</strong>. The question banks you load, recognition results, and personal settings are stored and processed solely on your device; we never upload them to any server, and we cannot view or recover them.</p>
+
+    <p>Please read this policy carefully before using the App. If you have any questions, contact us via the methods listed in Section 9.</p>
+
+    <h2>1. How We Handle Your Information</h2>
+
+    <h3>1.1 Question bank file contents that you load</h3>
+    <p>To provide the floating carousel feature, the App reads and parses — entirely on your device — the Excel (.xlsx) file that you voluntarily open, including:</p>
+    <ul>
+      <li>Cell text such as questions, correct answers, and options;</li>
+      <li>Sheet names and cell formats (such as dates).</li>
+    </ul>
+    <p>This content is used solely to display and cycle through questions locally. It is kept in memory and in the App's local preferences and is <strong>never uploaded to any server</strong>. The bank file itself is never modified; we recommend keeping a backup of your original file.</p>
+    <div class="notice">Do not import question banks that you are not authorized to use, or material protected by copyright, unless you have obtained valid authorization.</div>
+
+    <h3>1.2 Screen recognition information ("Pick by Selection")</h3>
+    <p>When you actively enable Pick by Selection and drag-select text on screen, the App captures the image of the selected screen region and converts it to text using the <strong>on-device OCR capability</strong> (the system Vision framework on macOS, or the system OCR engine on Windows), solely for matching against your local question bank.</p>
+    <ul>
+      <li>The captured screen image is <strong>used transiently and discarded</strong> — it is released as soon as recognition completes and is never written to disk;</li>
+      <li>The recognized text is used only for local matching against your bank; it is never uploaded, shared, or used for any other purpose;</li>
+      <li>Recognition never runs automatically in the background — it is triggered only when you actively drag-select text.</li>
+    </ul>
+
+    <h3>1.3 Preferences</h3>
+    <p>To preserve your choices, the App stores the following settings locally: the card's position anchor, carousel interval, font size, the Anti-capture toggle, the Pick by Selection toggle, and the path of the most recently opened question bank. These settings remain on your device (macOS system preferences on macOS, or config.json in the app folder on Windows) and are never uploaded.</p>
+
+    <h3>1.4 Local run logs</h3>
+    <p>To troubleshoot features such as Pick by Selection, the App may record limited run events in the device's temporary directory (such as whether a target window was found, whether OCR succeeded, and match scores). Logs do not contain the full contents of your question bank, but may include fragments of the text you drag-selected. Logs are stored only in the local temporary directory and are cleaned up automatically by the operating system. We never read these logs proactively; we only receive what you choose to send us.</p>
+
+    <h2>2. Network Access and Disclosure</h2>
+    <p>The core features of the App <strong>require no network connection</strong>. We operate no servers for receiving question bank contents, screen recognition results, or personal settings, and we never sell, rent, trade, share, or transfer your information across borders.</p>
+    <p>Networks may be involved only in scenarios you initiate:</p>
+    <ul>
+      <li>When you email us feedback, the email service provider processes the message under its own privacy policy;</li>
+      <li>When you click external links on the support pages, the target website may process related data under its own privacy policy.</li>
+    </ul>
+
+    <h2>3. Device Permissions</h2>
+    <p>The App uses the following device capability only when necessary for the related feature:</p>
+    <table>
+      <tr><th>Permission</th><th>Purpose</th><th>Can it be turned off?</th><th>Effect</th></tr>
+      <tr><td>Screen Recording (macOS)</td><td>Capturing the screen region you drag-select, for local text recognition when Pick by Selection is enabled</td><td>Yes</td><td>Pick by Selection becomes unavailable; all other features (carousel, Anti-capture, etc.) are unaffected</td></tr>
+    </table>
+    <p>We will never withhold other properly functioning features because you decline a non-essential permission. You can enable or disable this permission in System Settings at any time; after changing it, we recommend restarting the App so the change takes full effect.</p>
+
+    <h2>4. Third-Party Components</h2>
+    <p>The App uses the following local components for basic capabilities. They run on your device as called by the App; under the current implementation, they do not transmit any of your content to their developers as a result of using the App.</p>
+    <table>
+      <tr><th>Component</th><th>Provider</th><th>Purpose</th><th>Information involved</th></tr>
+      <tr><td>Vision framework (macOS) / Windows.Media.Ocr (Windows)</td><td>Operating system provider</td><td>On-device text recognition (OCR)</td><td>The captured image of your selected screen region — processed locally and discarded immediately after use</td></tr>
+      <tr><td>openpyxl</td><td>Open-source component (Windows version only)</td><td>Reading Excel files</td><td>The question bank file you open — processed locally only</td></tr>
+      <tr><td>AppKit / Tkinter</td><td>Operating system or open-source providers</td><td>Rendering the interface and floating window</td><td>No personal content</td></tr>
+    </table>
+    <p>If we ever add third-party services that collect, share, or delegate personal information online, we will update this policy, notify you separately as required by law, and obtain your consent where necessary.</p>
+
+    <h2>5. Storage Period, Location, and Security</h2>
+    <p><strong>Location:</strong> question bank contents, recognition results, preferences, and run logs are stored locally on the device where you use the App. We do not upload them to any server or proactively transfer them abroad.</p>
+    <p><strong>Retention:</strong> preferences are kept until you remove the related files, clear app data, or uninstall the App; screen captures are transient and discarded immediately; temporary logs are cleaned up automatically by the operating system.</p>
+    <p><strong>Security measures:</strong> Anti-capture is based on the window protection capability provided by the operating system, preventing the card's contents from being captured by recordings, screenshots, or shared screens.</p>
+    <div class="notice">Risk notice: no security measure is absolute. Anti-capture only blocks software-based capture; it cannot prevent the screen from being filmed with an external device such as a phone.</div>
+
+    <h2>6. Your Rights and Data Deletion</h2>
+    <p>All App data is stored locally on your device; we cannot remotely access, query, correct, or delete it. You can manage it yourself:</p>
+    <ul>
+      <li>Replace or remove the question bank by opening a different file in the App;</li>
+      <li>Clear preferences and the position anchor: on macOS, run <code>defaults delete com.onejiall.quizbar</code> in Terminal; on Windows, delete config.json in the app folder;</li>
+      <li>Revoke the Screen Recording permission in System Settings — we recommend restarting the App afterwards;</li>
+      <li>Uninstall the App to remove its data.</li>
+    </ul>
+    <p>If you have emailed us feedback, you may request access, correction, or deletion of that correspondence via the contact methods in Section 9. We will verify your identity and respond within 3 business days, unless otherwise required by law.</p>
+
+    <h2>7. Protection of Minors</h2>
+    <p>The App is not directed at minors under the age of 14. Because the App requires no registration and processes data only locally, we generally cannot determine a user's age. Minors should use the App under the guidance of their parents or guardians.</p>
+
+    <h2>8. Updates to This Policy</h2>
+    <p>We may update this policy due to changes in features, data processing practices, laws, or platform rules. Updates take effect as of the effective date stated on this page. If we ever add accounts, cloud sync, advertising, analytics, crash reporting, or other online features, we will update this policy and provide notice — and obtain consent where required — before enabling such features.</p>
+
+    <h2>9. How to Contact Us</h2>
+    <p>Operator: the developer of QuizBar</p>
+    <p>Email: <a href="mailto:17600108866@163.com">17600108866@163.com</a></p>
+    <p>If you have any questions, comments, complaints, or requests regarding this policy or personal information protection, please contact us via the email above. We usually respond within 3 business days.</p>
+
+    <footer>© 2026 QuizBar · Floating quiz carousel for Excel question banks</footer>
+  </main>
+</body>
+
+</html>
