@@ -1,0 +1,195 @@
+<!doctype html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <meta name="description" content="背题宝技术支持、使用说明、常见问题与联系方式。">
+  <title>背题宝技术支持</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --bg: #fff;
+      --text: #1f2328;
+      --muted: #59636e;
+      --line: #d0d7de;
+      --panel: #f6f8fa;
+      --link: #0969da;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #0d1117;
+        --text: #e6edf3;
+        --muted: #9da7b3;
+        --line: #30363d;
+        --panel: #161b22;
+        --link: #58a6ff;
+      }
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font: 16px/1.75 -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+    }
+
+    main {
+      width: min(900px, calc(100% - 32px));
+      margin: 0 auto;
+      padding: 40px 0 72px;
+    }
+
+    header {
+      padding-bottom: 24px;
+      border-bottom: 1px solid var(--line);
+      margin-bottom: 32px;
+    }
+
+    h1 { margin: 0 0 8px; font-size: 2rem; line-height: 1.3; }
+    h2 { margin: 40px 0 12px; font-size: 1.4rem; line-height: 1.4; }
+    h3 { margin: 28px 0 8px; font-size: 1.12rem; line-height: 1.5; }
+    p, ul, ol { margin: 10px 0; }
+    li + li { margin-top: 6px; }
+    .meta { color: var(--muted); }
+    a { color: var(--link); }
+
+    .notice {
+      margin: 20px 0;
+      padding: 14px 16px;
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 10px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 12px 0;
+      font-size: .95rem;
+    }
+    th, td {
+      border: 1px solid var(--line);
+      padding: 8px 12px;
+      text-align: left;
+      vertical-align: top;
+    }
+    th { background: var(--panel); }
+
+    kbd {
+      padding: 2px 6px;
+      border: 1px solid var(--line);
+      border-bottom-width: 2px;
+      border-radius: 5px;
+      background: var(--panel);
+      font-size: .88em;
+    }
+
+    footer {
+      margin-top: 48px;
+      padding-top: 20px;
+      border-top: 1px solid var(--line);
+      color: var(--muted);
+      font-size: .9rem;
+    }
+  </style>
+</head>
+
+<body>
+  <main>
+    <header>
+      <h1>背题宝技术支持</h1>
+      <div class="meta">更新日期：2026年10月21日</div>
+    </header>
+
+    <p>背题宝是一款 macOS 题库悬浮轮播工具：把 Excel 题库做成一张<strong>置顶悬浮卡片</strong>，逐题循环播放；开启"选中取题"后，在任意应用里<strong>划选题目文字</strong>，卡片立即显示该题的答案与解析排版。所有数据均在本地处理，不会上传至任何服务器。</p>
+
+    <h2>功能一览</h2>
+    <table>
+      <tr><th>功能</th><th>说明</th></tr>
+      <tr><td>悬浮轮播</td><td>卡片置顶于所有应用之上，按设定间隔逐题循环播放，可暂停、上一条、下一条。</td></tr>
+      <tr><td>智能排版</td><td>自动识别单选、多选、判断、简答题型：选项分行展示，正确答案打 ✓ 并高亮。</td></tr>
+      <tr><td>选中取题</td><td>开启后在任意应用中划选题目文字，松开鼠标即识别并跳转到对应题目。</td></tr>
+      <tr><td>防拍模式</td><td>开启后卡片在录屏、截图、共享屏幕中自动隐形，本机观看不受影响。</td></tr>
+      <tr><td>多工作表</td><td>自动合并 Excel 中所有工作表的内容一起轮播。</td></tr>
+      <tr><td>自动重载</td><td>修改并保存 Excel 后无需重启，卡片内容自动更新。</td></tr>
+      <tr><td>背景自适应</td><td>根据卡片背后屏幕内容的明暗，自动切换深色/浅色外观。</td></tr>
+      <tr><td>位置记忆</td><td>默认出现在屏幕右上角；拖动到任意位置后自动记忆，重启保持。</td></tr>
+    </table>
+
+    <h2>快速上手</h2>
+    <ol>
+      <li>打开背题宝，把 <strong>.xlsx</strong> 题库文件拖到卡片上（或右键 → 打开 Excel 文件）；</li>
+      <li>卡片开始逐题轮播：<kbd>单击卡片</kbd> 暂停/继续，<kbd>按住拖动</kbd> 移动位置，<kbd>右键</kbd> 打开全部设置；</li>
+      <li>点击右上角 🎯 图标开启"选中取题"，👁 图标切换"防拍"。</li>
+    </ol>
+
+    <div class="notice">
+      题库模板建议：第一列为题目，随后依次为正确答案（如 B、ABD、对/错）与各选项内容。空列会被自动跳过。
+    </div>
+
+    <h2>常见问题</h2>
+
+    <h3>1. 支持哪些文件格式？</h3>
+    <p>支持 <strong>.xlsx</strong> 格式的 Excel 工作簿。包含多个工作表时，所有工作表的内容会按顺序合并轮播，底部信息栏会显示当前题目所属的工作表名称。</p>
+
+    <h3>2. 题目是如何被识别成不同题型的？</h3>
+    <p>应用会扫描每一行的单元格，按以下规则自动判断题型：</p>
+    <ul>
+      <li>某个单元格内容为单个字母 <strong>A~F</strong> → 判定为选择题答案，其后单元格为选项；多个字母（如 ABD）则按多选题处理；</li>
+      <li>单元格内容为 <strong>对 / 错 / 正确 / 错误 / √ / ×</strong> 等 → 判定为判断题；</li>
+      <li>末列为较长文本且无选项 → 判定为简答题，答案以文字形式高亮展示；</li>
+      <li>题目与答案之间的"难度""分类"等列会自动归入底部信息栏。</li>
+    </ul>
+    <p>无法识别的行会以单行文本样式轮播，不影响其他题目。</p>
+
+    <h3>3. 选中取题没有反应，怎么办？</h3>
+    <p>请按顺序排查：</p>
+    <ol>
+      <li><strong>macOS</strong>：需要"屏幕录制"权限。请到 系统设置 → 隐私与安全性 → 屏幕录制，打开背题宝的开关，然后<strong>完全退出并重新打开</strong>应用（权限对重启后的进程生效）；</li>
+      <li>确认卡片底部状态栏显示"选中取题"而非"取题不可用/无录屏权限"；</li>
+      <li>划选时请确保鼠标有明显的拖动位移（轻点一下不会触发）；</li>
+      <li>选中的文字必须在屏幕上完整可见（被遮挡的部分无法识别）；</li>
+      <li>识别到的文字会与题库题干做模糊匹配（相似度 ≥ 72% 即命中）。若屏幕上的题目不在当前加载的题库中，将无法切换。</li>
+    </ol>
+
+    <h3>4. 为什么显示"无录屏权限"或"取题不可用"？</h3>
+    <p>"无录屏权限"表示系统未授予屏幕录制授权（选中取题依赖它），请参照上一条完成授权并重启应用。"取题不可用"表示截图采集连续失败，通常是权限刚被修改尚未重启应用，或显示器刚发生变化，稍候或重启应用即可恢复。</p>
+
+    <h3>5. 防拍模式是什么原理？会被发现吗？</h3>
+    <p>防拍模式使用 macOS 系统级窗口保护能力（窗口共享开关）：开启后，录屏软件、截图工具、会议共享屏幕中都不会出现这张卡片，但您本机屏幕上照常显示。这是操作系统提供的正规能力，并非规避检测的漏洞。</p>
+    <div class="notice">防拍只能屏蔽软件采集，无法防止手机等外部设备直接拍摄屏幕。</div>
+
+    <h3>6. 悬浮卡片的位置可以固定吗？</h3>
+    <p>可以。默认出现在屏幕右上角；按住卡片拖动到任意位置后，应用会记住新的右上角锚点，切题、重启都不会跑位。右键菜单提供"复位到屏幕右上角"可随时恢复默认。卡片任何情况下都不会超出屏幕边界。</p>
+
+    <h3>7. 修改了 Excel 内容会自动更新吗？</h3>
+    <p>会。应用每个轮播周期都会检测文件修改时间，保存后内容自动重新加载，无需重启。</p>
+
+    <h3>8. 如何反馈问题？</h3>
+    <p>发送反馈时，建议提供以下信息：</p>
+    <ul>
+      <li>背题宝版本号；</li>
+      <li>macOS 版本；</li>
+      <li>问题发生的具体操作步骤；</li>
+      <li>macOS 用户可附上日志文件 <code>/tmp/quizbar_pick.log</code>（如涉及取题问题）。</li>
+    </ul>
+
+    <h2>联系我们</h2>
+    <ul>
+      <li>联系邮箱：<a href="mailto:17600108866@163.com">17600108866@163.com</a></li>
+    </ul>
+    <p>我们通常会在 3 个工作日内处理或答复。</p>
+
+    <h2>隐私政策</h2>
+    <p>背题宝<strong>不收集、不上传任何数据</strong>：题库文件、识别结果、使用记录均保存在您的设备本地；"选中取题"功能仅对屏幕指定区域进行本地识别，识别内容不会发送到任何服务器或第三方。</p>
+
+    <footer>背题宝 · Excel 题库悬浮轮播工具</footer>
+  </main>
+</body>
+
+</html>

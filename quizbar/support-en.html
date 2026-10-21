@@ -1,0 +1,197 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <meta name="description" content="QuizBar technical support, user guide, frequently asked questions and contact information.">
+  <title>QuizBar Support</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --bg: #fff;
+      --text: #1f2328;
+      --muted: #59636e;
+      --line: #d0d7de;
+      --panel: #f6f8fa;
+      --link: #0969da;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #0d1117;
+        --text: #e6edf3;
+        --muted: #9da7b3;
+        --line: #30363d;
+        --panel: #161b22;
+        --link: #58a6ff;
+      }
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font: 16px/1.75 -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+    }
+
+    main {
+      width: min(900px, calc(100% - 32px));
+      margin: 0 auto;
+      padding: 40px 0 72px;
+    }
+
+    header {
+      padding-bottom: 24px;
+      border-bottom: 1px solid var(--line);
+      margin-bottom: 32px;
+    }
+
+    h1 { margin: 0 0 8px; font-size: 2rem; line-height: 1.3; }
+    h2 { margin: 40px 0 12px; font-size: 1.4rem; line-height: 1.4; }
+    h3 { margin: 28px 0 8px; font-size: 1.12rem; line-height: 1.5; }
+    p, ul, ol { margin: 10px 0; }
+    li + li { margin-top: 6px; }
+    .meta, .language { color: var(--muted); }
+    .language { margin-top: 12px; }
+    a { color: var(--link); }
+
+    .notice {
+      margin: 20px 0;
+      padding: 14px 16px;
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 10px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 12px 0;
+      font-size: .95rem;
+    }
+    th, td {
+      border: 1px solid var(--line);
+      padding: 8px 12px;
+      text-align: left;
+      vertical-align: top;
+    }
+    th { background: var(--panel); }
+
+    kbd {
+      padding: 2px 6px;
+      border: 1px solid var(--line);
+      border-bottom-width: 2px;
+      border-radius: 5px;
+      background: var(--panel);
+      font-size: .88em;
+    }
+
+    footer {
+      margin-top: 48px;
+      padding-top: 20px;
+      border-top: 1px solid var(--line);
+      color: var(--muted);
+      font-size: .9rem;
+    }
+  </style>
+</head>
+
+<body>
+  <main>
+    <header>
+      <h1>QuizBar Support</h1>
+      <div class="meta">Last updated: October 21, 2026</div>
+      <div class="language"><a href="support-zh-cn.html" hreflang="zh-CN">简体中文</a> · English</div>
+    </header>
+
+    <p>QuizBar is a floating quiz card tool for macOS: it turns your Excel question bank into an <strong>always-on-top card</strong> that cycles through questions one by one. With <strong>Pick by Selection</strong> enabled, just drag-select question text in any app and the card instantly shows that question with its answer. All data is processed locally and never uploaded to any server.</p>
+
+    <h2>Features</h2>
+    <table>
+      <tr><th>Feature</th><th>Description</th></tr>
+      <tr><td>Floating carousel</td><td>The card stays above all apps and cycles through questions at a set interval. Pause, previous, and next are one click away.</td></tr>
+      <tr><td>Smart layout</td><td>Automatically detects single-choice, multiple-choice, true/false, and short-answer questions. Options are shown on separate lines with the correct answer marked ✓ and highlighted.</td></tr>
+      <tr><td>Pick by Selection</td><td>Once enabled, drag-select question text in any app — release the mouse and the card jumps to the matching question.</td></tr>
+      <tr><td>Anti-capture</td><td>The card becomes invisible in screen recordings, screenshots, and shared screens, while remaining fully visible on your own display.</td></tr>
+      <tr><td>Multiple sheets</td><td>All worksheets in the workbook are merged and played in order.</td></tr>
+      <tr><td>Auto reload</td><td>Edits to the Excel file are picked up automatically — no restart needed.</td></tr>
+      <tr><td>Adaptive appearance</td><td>Switches between dark and light looks based on the brightness of the content behind the card.</td></tr>
+      <tr><td>Position memory</td><td>Appears at the top-right of the screen by default; after dragging, the new position is remembered across restarts.</td></tr>
+    </table>
+
+    <h2>Quick Start</h2>
+    <ol>
+      <li>Open QuizBar and drag your <strong>.xlsx</strong> question bank onto the card (or right-click → Open Excel File);</li>
+      <li>The card starts cycling: <kbd>click the card</kbd> to pause/resume, <kbd>drag</kbd> to move it, <kbd>right-click</kbd> for all settings;</li>
+      <li>Click the 🎯 icon at the top-right to enable Pick by Selection, or the 👁 icon to toggle Anti-capture.</li>
+    </ol>
+
+    <div class="notice">
+      Template tip: put the question in the first column, followed by the correct answer (e.g. B, ABD, True/False) and the options. Empty columns are skipped automatically.
+    </div>
+
+    <h2>Frequently Asked Questions</h2>
+
+    <h3>1. Which file formats are supported?</h3>
+    <p><strong>.xlsx</strong> workbooks are supported. If the workbook contains multiple worksheets, their contents are merged and played in order; the status bar at the bottom shows which worksheet the current question belongs to.</p>
+
+    <h3>2. How are question types detected?</h3>
+    <p>The app scans the cells of each row using these rules:</p>
+    <ul>
+      <li>A cell containing a single letter <strong>A–F</strong> is treated as the answer of a choice question, and the cells after it are the options. Multiple letters (e.g. ABD) make it a multiple-choice question;</li>
+      <li>A cell containing <strong>对 / 错 / 正确 / 错误 / √ / ×</strong> (true/false markers in Chinese) is treated as a true/false answer;</li>
+      <li>If the last cell is a long text and there are no options, it is treated as a short-answer question with the answer shown as highlighted text;</li>
+      <li>Columns between the question and the answer, such as difficulty and category, are moved to the status bar.</li>
+    </ul>
+    <p>Rows that cannot be recognized fall back to a simple single-line style without affecting other questions.</p>
+
+    <h3>3. Pick by Selection does nothing — what should I check?</h3>
+    <p>Please check the following in order:</p>
+    <ol>
+      <li><strong>macOS</strong> requires the Screen Recording permission: open System Settings → Privacy &amp; Security → Screen Recording, enable QuizBar, then <strong>completely quit and reopen</strong> the app (the permission takes effect for newly launched processes);</li>
+      <li>Make sure the status bar shows "Pick active" rather than "unavailable / no permission";</li>
+      <li>The drag must be a real selection — a simple click without movement won't trigger anything;</li>
+      <li>The selected text must be fully visible on screen (occluded parts cannot be recognized);</li>
+      <li>The recognized text is fuzzy-matched against the question stems (≥ 72% similarity). If the question on screen is not in the currently loaded bank, the card won't switch.</li>
+    </ol>
+
+    <h3>4. Why does it say "no screen recording permission" or "picking unavailable"?</h3>
+    <p>"No permission" means the Screen Recording authorization is missing (Pick by Selection depends on it) — follow the steps above, then restart the app. "Picking unavailable" means screen capture failed repeatedly, usually because the permission was just changed without restarting the app, or because the display configuration just changed. It recovers on its own or after restarting the app.</p>
+
+    <h3>5. How does Anti-capture work? Can it be detected?</h3>
+    <p>Anti-capture uses the system-level window protection provided by macOS (the window sharing toggle): once enabled, the card is invisible to screen recorders, screenshot tools, and shared screens, while remaining fully visible on your own display. It is a legitimate capability provided by the operating system, not an exploit.</p>
+    <div class="notice">Anti-capture only blocks software capture. It cannot prevent someone from filming the screen with an external device such as a phone.</div>
+
+    <h3>6. Can the card position be fixed?</h3>
+    <p>Yes. The card appears at the top-right of the screen by default; after you drag it anywhere, the new top-right anchor is remembered across question switches and app restarts. Use "Reset to screen top-right" in the right-click menu to restore the default at any time. The card never leaves the screen bounds.</p>
+
+    <h3>7. Will edits to the Excel file be picked up automatically?</h3>
+    <p>Yes. The app checks the file's modification time every cycle and reloads the content automatically after you save — no restart needed.</p>
+
+    <h3>8. How do I report a problem?</h3>
+    <p>When reporting an issue, please include:</p>
+    <ul>
+      <li>The QuizBar version;</li>
+      <li>Your macOS version;</li>
+      <li>The exact steps to reproduce the issue;</li>
+      <li>The log file <code>/tmp/quizbar_pick.log</code> if the issue is related to Pick by Selection.</li>
+    </ul>
+
+    <h2>Contact Us</h2>
+    <ul>
+      <li>Email: <a href="mailto:17600108866@163.com">17600108866@163.com</a></li>
+    </ul>
+    <p>We usually respond within 3 business days.</p>
+
+    <h2>Privacy Policy</h2>
+    <p>QuizBar <strong>collects and uploads nothing</strong>: your question bank, recognition results, and usage records all stay on your device. Pick by Selection only performs local recognition on the specified screen region — nothing is ever sent to any server or third party.</p>
+
+    <footer>QuizBar · Floating quiz carousel for Excel question banks</footer>
+  </main>
+</body>
+
+</html>
